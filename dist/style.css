@@ -1,0 +1,37 @@
+body {
+    margin: auto;
+    font-family: sans-serif;
+    color: white;
+}
+
+#header {
+    background-color: rgb(83, 139, 121);
+    padding: 40px;
+    text-align: center;
+}
+
+#card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+}
+
+.card-title {
+    background-color: rgb(131, 104, 108);
+    margin: 0px;
+    padding: 20px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card-body {
+    background-color: rgb(184, 184, 184);
+    margin: 0px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.employee-info {
+    margin: 0px;
+    padding: 10px;
+}

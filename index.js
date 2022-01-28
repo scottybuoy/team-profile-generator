@@ -3,6 +3,7 @@ const inquirer = require("inquirer");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern")
+const generateHTML = require("./src/generateHTML");
 
 console.log("Are we working?");
 
@@ -123,18 +124,18 @@ const writeFile = data => {
             console.log("Your team page has been created successfully!")
         }
     })
-}
+};
 
 
 
-
-
-
-
-
-addManager();
-
-
-const generateHtml = () => {
-
-}
+addManager()
+    .then(addEmployee)
+    .then(teamArray => {
+        return generateHTML(teamArray);
+    })
+    .then(pageHTML => {
+        return writeFile(pageHTML);
+    })
+    .catch(err => {
+        console.error(err);
+    });
