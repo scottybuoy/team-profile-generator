@@ -21,7 +21,7 @@ const generateEngineer = function(engineer) {
     <div class="card">
     <div class="card-title">
         <h2>${engineer.name}</h2>
-        <h3>Manager</h3>
+        <h3>Engineer</h3>
     </div>
     <div class="card-body">
         <p class="employee-info">ID: ${engineer.id}</p>
@@ -39,7 +39,7 @@ const generateIntern = function(intern) {
     <div class="card">
     <div class="card-title">
         <h2>${intern.name}</h2>
-        <h3>Manager</h3>
+        <h3>Intern</h3>
     </div>
     <div class="card-body">
         <p class="employee-info">ID: ${intern.id}</p>

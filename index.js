@@ -10,7 +10,7 @@ console.log("Are we working?");
 const teamMembers = [];
 
 const addManager = () => {
-    inquirer.prompt(
+    return inquirer.prompt(
         [{
             type: "input",
             name: "name",
@@ -40,7 +40,7 @@ const addManager = () => {
         const manager = new Manager(name, id, email, officeNumber);
 
         teamMembers.push(manager);
-        console.log(teamMembers);
+        console.log(manager);
     })
 };
 
@@ -48,7 +48,7 @@ const addManager = () => {
 
 
 const addEmployee = () => {
-    inquirer.prompt([
+    return inquirer.prompt([
         {
             type: "list",
             name: "role",
@@ -105,12 +105,12 @@ const addEmployee = () => {
             employee = new Intern(name, id, email, school);
         }
 
-        teamArray.push(employee);
+        teamMembers.push(employee);
 
         if (confirmAddEmployee) {
-            return addEmployee(teamArray);
+            return addEmployee(teamMembers);
         } else {
-            return teamArray;
+            return teamMembers;
         }
     })
 };
@@ -130,12 +130,12 @@ const writeFile = data => {
 
 addManager()
     .then(addEmployee)
-    .then(teamArray => {
-        return generateHTML(teamArray);
+    .then(teamMembers => {
+        return generateHTML(teamMembers);
     })
     .then(pageHTML => {
         return writeFile(pageHTML);
     })
     .catch(err => {
-        console.error(err);
+        console.log(err);
     });

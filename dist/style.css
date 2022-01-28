@@ -5,33 +5,44 @@ body {
 }
 
 #header {
-    background-color: rgb(83, 139, 121);
+    background-color: rgb(83, 139, 100);
     padding: 40px;
     text-align: center;
 }
 
 #card-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    margin: 60px 200px 60px 200px;
 }
 
 .card {
+   padding: 25px;
+    width: 280px;
 }
 
 .card-title {
-    background-color: rgb(131, 104, 108);
+    background-color: rgb(135, 163, 152);
     margin: 0px;
     padding: 20px;
     border-radius: 10px 10px 0px 0px;
+    text-align: center;
 }
 
 .card-body {
     background-color: rgb(184, 184, 184);
     margin: 0px;
     border-radius: 0px 0px 10px 10px;
+    padding: 25px;
 }
 
 .employee-info {
     margin: 0px;
     padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(181, 224, 194);
 }
